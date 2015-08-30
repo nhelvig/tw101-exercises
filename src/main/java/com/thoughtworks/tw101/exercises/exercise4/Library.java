@@ -11,7 +11,12 @@ public class Library {
         this.printStream = printStream;
     }
 
-    public String printBooksContaining(String partialBookTitle) {
-        return null;
+    public void printBooksContaining(String partialBookTitle) {
+        for (String title : books) {
+            if (title.contains(partialBookTitle)) {
+                this.printStream.println(title);
+            }
+        }
+        this.printStream.println("--------------------");
     }
 }
